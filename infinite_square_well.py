@@ -45,3 +45,19 @@ def draw_infinite_square_well_potential(function_positions, infinite_square_well
     plt.ylim([-maximum_potential_value, maximum_potential_value])
 
     return
+
+
+def infinite_square_well_differential_equation(x, psi, k_squared):
+    """
+    Sets up second-order differential equation for solve_ivp as two linear differential equations
+    psi' = psi'
+    psi'' = -k^2 * psi
+    :param x:  position value
+    :param psi:  list of wave function and wave-function derivative's values
+    :param K: adjustable parameter to find solutions
+    :return: psi': list of wave function and wave-function derivative's first derivative values
+    """
+    dpsi = [0, 0]           # initialize the (psi', psi'') vector
+    dpsi[0] = psi[1]        # set psi' = psi'
+    dpsi[1] = -k_squared * psi[0]   # set psi'' = -constant * psi
+    return dpsi

@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from cycler import cycler
 
+
 def plot_wave_function(potential_name, length_scale, positions, quantum_numbers):
     """
     Plots one-dimensional wave function given name of potential, principal length scale of potential, and
