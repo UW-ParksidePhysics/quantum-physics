@@ -33,6 +33,7 @@ def wag_the_dog(potential_name, adjustable_coefficient_values, length_scale, pos
         print('No potential named {} supported'.format(potential_name))
         print('Try one from this list: {}'.format([potential for potential in supported_potentials]))
         return
+
     # Formatting for all plots
     #    Draw psi = 0 line
     plt.axhline(color='black')
